@@ -5,12 +5,12 @@ public class Main {
 
         // Задание 1.1
         for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
+            System.out.print(i);
         }
 
         //Задание 2.1
         for (int i = 10; i >= 1; i--) {
-            System.out.println(i);
+            System.out.print(i);
         }
 
         //Задание 3.1
@@ -52,24 +52,23 @@ public class Main {
         }
         int z=0;
        while (z<=10){
-           z+=1;
-            System.out.print(" "+ z + " ");
+           z=z+1;
+            System.out.print(" "+ z );
         }
-        System.out.println(" ");
+       // System.out.println(" ");Если я убираю эту строчку у меня получается ответ в одну строку 1 2 3 4 5 6 7 8 9 10 11 10 9 8 7 6 5 4 3 2 1 013080000
+        //Тоесть все три задания в одной строке ответа
         for(int g=10;g>=0;g-- ){
-            System.out.print(" "+g+" ");
+            System.out.print(" "+g);
         }
-        System.out.println(" ");
 
-        int birthRate = 12_000_000;
-        int birthRute = (17 * birthRate) / 1000;
-        int mortality = (8 * birthRate) / 1000;
-        int ears = 0;
-        while (ears < 10) {
-            ears = ears + 1;
-            birthRate = birthRate + (birthRute - mortality);
+        int population = 12_000_000;
+        int birthRate = (17 * population) / 1000;
+        int mortality = (8 * population) / 1000;
+        for (int i=0; i<=10; i++){
+            population= population+birthRate;
+            population=population-mortality;
+            System.out.println("Год "+ i+ " численность " +population);
         }
-        System.out.println(birthRate);
 
         //Задание 1.2/2.2/3.2
         int amount = 15000;
@@ -96,9 +95,9 @@ public class Main {
         int beginning = currentYear - 200;
         int ending = currentYear + 100;
         for (i = beginning; i < ending; i++) {
-            if (i % 79 == 0) ;
+            if (i % 79 == 0)
+            System.out.println(i);
         }
-        System.out.println(i);
 
 
         //Задание 2.3
